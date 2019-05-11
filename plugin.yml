@@ -1,0 +1,6 @@
+name: RhinoPayToFly
+main: me.joao.whitshs.rhinomc.paytofly.Main
+version: 1.0
+commands:
+  paytofly:
+    aliases: [ptf]

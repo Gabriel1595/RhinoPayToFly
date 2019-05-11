@@ -1,0 +1,20 @@
+PayToFly:
+  TempoMaximo: 120
+  CustoPorSegundo: 1000
+  
+Mensagens:
+  PayToFlySintaxe: '&c&lERRO &cUtilize /paytofly <tempo>.'
+  SemPermissao: '&cVocê não possui permissão!'
+  SemMoney: '&cVocê não possui money para utilizar o paytofly!'
+  TempoMaximo: '&cO tempo precisa ser entre 1 segundo e 120 segundos!'
+  JaEstaVoando: '&cVocê já está voando'
+  TempoAcabou: 
+  - ''
+  - '&a&lFLY &cInfelizmente o tempo de voo acabou!'
+  - ''
+  PayToFly:
+  - ''
+  - '&a&lFLY &aParabéns, agora você poderá voar por &f{tempo} segundos'
+  - '&a&lFLY &aCusto: &f{custo}'
+  - ''
+  ActionBar: '&a&lFLY &aTempo de voo restante: &f{tempo}'
