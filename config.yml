@@ -2,15 +2,24 @@ PayToFly:
   TempoMaximo: 120
   CustoPorSegundo: 1000
   
+MundosPermitidos:
+- 'world'  
+
 Mensagens:
   PayToFlySintaxe: '&c&lERRO &cUtilize /paytofly <tempo>.'
   SemPermissao: '&cVocê não possui permissão!'
   SemMoney: '&cVocê não possui money para utilizar o paytofly!'
   TempoMaximo: '&cO tempo precisa ser entre 1 segundo e 120 segundos!'
   JaEstaVoando: '&cVocê já está voando'
+  MundoErrado: '&cVocê não pode utilizar isso neste mundo!'
   TempoAcabou: 
   - ''
   - '&a&lFLY &cInfelizmente o tempo de voo acabou!'
+  - ''
+  MudouParaMundoNaoPermitido:
+  - ''
+  - '&a&lFLY &cInfelizmente, você cometeu um erro ao mudar para um mundo'
+  - '&a&lFLY &conde o fly não é permitido'
   - ''
   PayToFly:
   - ''

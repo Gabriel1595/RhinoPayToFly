@@ -22,8 +22,15 @@ public class PayToFlyCommand implements CommandExecutor{
 			sender.sendMessage(Main.getPlugin().getConfig().getString("Mensagens.SemPermissao").replace("&", "§"));
 			return true;
 		}
+		
 		if (args.length != 1) {
 			sender.sendMessage(Main.getPlugin().getConfig().getString("Mensagens.PayToFlySintaxe").replace("&", "§"));
+			return true;
+		}
+		Player player = (Player)sender;
+		
+		if (!Main.getPlugin().worlds.contains(player.getWorld())) {
+			sender.sendMessage(Main.getPlugin().getConfig().getString("Mensagens.MundoErrado").replace("&", "§"));
 			return true;
 		}
 		
@@ -50,7 +57,6 @@ public class PayToFlyCommand implements CommandExecutor{
 		}
 		
 		int money = Main.getPlugin().getConfig().getInt("PayToFly.CustoPorSegundo") * Integer.valueOf(args[0]);
-		Player player = (Player)sender;
 		
 		if (!Main.getEconomy().has(player, money)) {
 			sender.sendMessage(Main.getPlugin().getConfig().getString("Mensagens.SemMoney").replace("&", "§"));
