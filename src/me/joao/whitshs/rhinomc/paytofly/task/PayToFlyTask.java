@@ -12,8 +12,8 @@ import me.joao.whitshs.rhinomc.paytofly.utils.Helper;
 
 public class PayToFlyTask extends BukkitRunnable{
 
-	List<String> tempo = Main.getPlugin().getConfig().getStringList("Mensagens.TempoAcabou");
-	String ac = Main.getPlugin().getConfig().getString("Mensagens.ActionBar").replace("&", "ง");
+	List<String> tempo = Main.getPlugin().getConfig().getStringList("Mensagens.Time over");
+	String ac = Main.getPlugin().getConfig().getString("Mensagens.ActionBar").replace("&", "ยง");
 	
 	@Override
 	public void run() {
@@ -31,8 +31,8 @@ public class PayToFlyTask extends BukkitRunnable{
 			
 			if (entry.getValue() <= tempoAtual || !player.isOnline()) {
 				FlyManager.getHashMap().remove(player);
-				for (String st : Main.getPlugin().getConfig().getStringList("Mensagens.TempoAcabou")) {
-					player.sendMessage(st.replace("&", "ง"));
+				for (String st : Main.getPlugin().getConfig().getStringList("Mensagens.Time over")) {
+					player.sendMessage(st.replace("&", "ยง"));
 				}
 				try {
 					player.setAllowFlight(false);
@@ -40,7 +40,7 @@ public class PayToFlyTask extends BukkitRunnable{
 
 				}
 			}else {
-				Helper.sendActionBar(player, ac.replace("&", "ง").replace("{tempo}", Helper.format(time)));
+				Helper.sendActionBar(player, ac.replace("&", "ยง").replace("{time}", Helper.format(time)));
 			}
 		}
 		
